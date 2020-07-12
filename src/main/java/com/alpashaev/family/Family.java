@@ -17,6 +17,22 @@ public class Family implements Comparable<Family> {
         return name.compareTo(f.getName());
     }
 
+    @Override
+    public boolean equals(Object f) {
+        if (this == f) return true;
+        if (getClass() != f.getClass()) return false;
+        Family family = (Family) f;
+        return name.equals(family.name) &&
+                quantityMember == family.quantityMember &&
+                title.equals(family.title) &&
+                emblemName.equals(family.emblemName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, quantityMember, title, emblemName);
+    }
+    
     public String getName() {
         return name;
     }
