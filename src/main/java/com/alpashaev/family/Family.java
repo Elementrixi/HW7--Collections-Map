@@ -1,5 +1,7 @@
 package main.java.com.alpashaev.family;
 
+import java.util.Objects;
+
 public class Family implements Comparable<Family> {
     private String name;
     private int quantityMember;
@@ -48,7 +50,7 @@ public class Family implements Comparable<Family> {
     @Override
     public String toString() {
         return "Family : " +
-                " name = '" + name + '\'' +
+                " name : " + name + '\'' +
                 ", quantity members = " + quantityMember +
                 ", title = '" + title + '\'' +
                 ", emblemName = '" + emblemName + '\'';
